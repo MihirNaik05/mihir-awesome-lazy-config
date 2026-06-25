@@ -44,6 +44,6 @@ require("nightfox").setup({
   groups = {},
 })
 
-vim.cmd([[colorscheme eldritch]])
+vim.cmd([[colorscheme nordfox]])
 
 vim.keymap.set("n", "<leader>^", "<Cmd>:!latexmk -pdf -pv<CR>")
