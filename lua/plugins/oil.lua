@@ -8,6 +8,9 @@ return {
 		skip_confirm_for_simple_edits = true,
 		watch_for_changes = true,
 		columns = { 'icon' },
+		keymaps = {
+			['<leader>.'] = 'actions.toggle_hidden',
+		},
 		confirmation = { border = 'rounded' },
 		preview_win = { update_on_cursor_moved = true },
 		view_options = { show_hidden = false, natural_order = 'fast' },
