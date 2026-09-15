@@ -1,0 +1,13 @@
+diff --git a/autoload/vimtex/compiler.vim b/autoload/vimtex/compiler.vim
+index fdcf37f5..f1914892 100644
+--- a/autoload/vimtex/compiler.vim
++++ b/autoload/vimtex/compiler.vim
+@@ -270,7 +270,7 @@ function! vimtex#compiler#get_output_clashes(compiler, states) abort " {{{1
+   if empty(l:signature) | return [] | endif
+ 
+   return filter(copy(a:states), {_, x ->
+-        \    x.compiler isnot a:compiler
++        \    has_key(x, 'compiler') && x.compiler isnot a:compiler
+         \ && has_key(x.compiler, 'is_running') && x.compiler.is_running()
+         \ && x.compiler.get_output_signature('aux') ==# l:signature})
+ endfunction
